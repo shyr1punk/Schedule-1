@@ -12,6 +12,7 @@ import android.app.Fragment;
 import android.support.v4.app.ActionBarDrawerToggle;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
+import android.content.Context;
 import android.content.SharedPreferences;
 import android.content.res.Configuration;
 import android.os.Bundle;
@@ -23,6 +24,8 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.WindowManager;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
@@ -104,8 +107,8 @@ public class NavigationDrawerFragment extends Fragment {
 		// android.R.id.text1, new String[] { getString(R.string.title_section1), getString(R.string.title_section2),
 		// getString(R.string.title_section3), }));
 		// mDrawerListView.setItemChecked(mCurrentSelectedPosition, true);
-		//return mDrawerListView;
-		
+		// return mDrawerListView;
+
 		return inflater.inflate(R.layout.navigation_drawer_layout_blue, container, false);
 	}
 
@@ -167,6 +170,15 @@ public class NavigationDrawerFragment extends Fragment {
 				}
 
 				getActivity().invalidateOptionsMenu(); // calls onPrepareOptionsMenu()
+			}
+
+			@Override
+			public void onDrawerStateChanged(int newState) {
+				super.onDrawerStateChanged(newState);
+				Log.d("TEST", "onDrawerStateChanged = " + newState);
+
+				InputMethodManager imm = (InputMethodManager) getActivity().getSystemService(Context.INPUT_METHOD_SERVICE);
+				imm.hideSoftInputFromWindow(getActivity().getCurrentFocus().getWindowToken(), 0);
 			}
 		};
 
