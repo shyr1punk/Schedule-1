@@ -39,17 +39,23 @@
         android:layout_height="3px"
         android:background="#3b5998" />
 
-    <TextView
+    <LinearLayout
+        android:id="@+id/llGroups"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="?android:attr/activatedBackgroundIndicator"
-        android:gravity="center"
-        android:minHeight="?android:attr/listPreferredItemHeightSmall"
-        android:paddingEnd="?android:attr/listPreferredItemPaddingEnd"
-        android:paddingStart="?android:attr/listPreferredItemPaddingStart"
-        android:text="список пуст"
-        android:textAppearance="?android:attr/textAppearanceListItemSmall"
-        android:textColor="#5a5e64" />
+        android:layout_height="wrap_content" >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?android:attr/activatedBackgroundIndicator"
+            android:gravity="center"
+            android:minHeight="?android:attr/listPreferredItemHeightSmall"
+            android:paddingEnd="?android:attr/listPreferredItemPaddingEnd"
+            android:paddingStart="?android:attr/listPreferredItemPaddingStart"
+            android:text="список пуст"
+            android:textAppearance="?android:attr/textAppearanceListItemSmall"
+            android:textColor="#5a5e64" />
+    </LinearLayout>
 
     <TextView
         android:layout_width="match_parent"
@@ -73,17 +79,23 @@
         android:layout_height="3px"
         android:background="#3b5998" />
 
-    <TextView
+    <LinearLayout
+        android:id="@+id/llTeachers"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="?android:attr/activatedBackgroundIndicator"
-        android:gravity="center"
-        android:minHeight="?android:attr/listPreferredItemHeightSmall"
-        android:paddingEnd="?android:attr/listPreferredItemPaddingEnd"
-        android:paddingStart="?android:attr/listPreferredItemPaddingStart"
-        android:text="список пуст"
-        android:textAppearance="?android:attr/textAppearanceListItemSmall"
-        android:textColor="#5a5e64" />
+        android:layout_height="wrap_content" >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?android:attr/activatedBackgroundIndicator"
+            android:gravity="center"
+            android:minHeight="?android:attr/listPreferredItemHeightSmall"
+            android:paddingEnd="?android:attr/listPreferredItemPaddingEnd"
+            android:paddingStart="?android:attr/listPreferredItemPaddingStart"
+            android:text="список пуст"
+            android:textAppearance="?android:attr/textAppearanceListItemSmall"
+            android:textColor="#5a5e64" />
+    </LinearLayout>
 
     <View
         android:layout_width="fill_parent"
