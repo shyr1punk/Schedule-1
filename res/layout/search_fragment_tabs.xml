@@ -34,7 +34,6 @@
                 android:singleLine="true"
                 android:textAppearance="?android:attr/textAppearance" >
 
-                <requestFocus />
             </EditText>
 
             <View
